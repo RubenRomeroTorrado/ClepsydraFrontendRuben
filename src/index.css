@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f3f4f6;
+  font-size: 1rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Split container styles */
+.split-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    90deg,
+    #1a1a1a 0%,
+    #2d2d2d 45%,
+    #2d2d2d 55%,
+    #1a1a1a 100%
+  );
+}
+
+.project-side {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.clepsydra-side {
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 14, 14) 0%,
+    rgba(45, 45, 45, 0.8) 100%
+  );
+}
+
+.path4med-side {
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(45, 45, 45, 0.8) 0%,
+    rgb(14, 14, 14) 100%
+  );
+}
+
+.project-logo {
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+}
+
+.clepsydra-logo {
+  max-width: 460px;
+}
+
+.project-side:hover .project-logo {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #174192;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* AI Button styles */
+.ai-btn {
+  background-size: 200% 100%;
+  background-position: left center;
+  transition: background-position 0.4s cubic-bezier(0.4,0,0.2,1), transform 0.15s cubic-bezier(0.4,0,0.2,1);
+}
+
+.ai-btn:hover {
+  background-position: right center;
+  transform: scale(1.07);
+}
+
+.ai-btn:active {
+  transform: scale(0.96);
+}
+
+/* Custom styles for the application */
+.tarefa-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tarefa-shadow-hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.europa-clep-img {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* Homepage footer styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+  z-index: 20;
+}
+
+/* Infinite carousel styles */
+.carousel-infinite {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 20rem;
+  margin: 0 auto 2rem auto;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  background: transparent !important;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 51s linear infinite;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.carousel-track.dragging {
+  animation-play-state: paused;
+}
+
+.carousel-track img {
+  width: 32rem;
+  height: 20rem;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border-radius: 1rem;
+  background: transparent !important;
+}
+
+.carousel-track img.img-16 {
+  object-position: top;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-tooltip {
+  pointer-events: none;
+  background: #f3f4f6;
+  color: #222;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  position: fixed;
+  z-index: 1000;
+  white-space: pre-line;
+}
+
+.carousel-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Chart modal styles */
+.chart-modal {
+  z-index: 9999 !important;
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.chart-modal .bg-white {
+  z-index: 10000 !important;
+  max-width: 98vw;
+  max-height: 98vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.chart-modal .flex-row {
+  flex-wrap: wrap;
+}
+
+#wellChart {
+  max-width: 70vw;
+  max-height: 70vh;
+}
+
+.leaflet-container {
+  z-index: 0 !important;
+}
+
+/* Trend analysis styles */
+.trend-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.trend-period-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.trend-type-up {
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.trend-type-down {
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.trend-type-none {
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.trend-value {
+  font-size: 1.1em;
+  margin-top: 0.2em;
+}
+
+/* Info table styles */
+#infoTableBox {
+  width: 100%;
+  max-width: 100%;
+}
+
+#infoTableBox table {
+  width: 100%;
+  table-layout: auto;
+}
+
+#infoTableBox th, #infoTableBox td {
+  white-space: nowrap;
+  text-align: left;
+}
+
+.show-chart-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-right: 0.3em;
+  padding: 0 0.2em;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+
+.show-chart-btn:hover {
+  color: #1d4ed8;
+}
+
+/* Partner accordion styles */
+.partner-title-bar {
+  background: #e6f0fa;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 2rem;
+  margin: 0 auto;
+  border-radius: 0;
+  box-shadow: none;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+}
+
+.partner-divider {
+  border-top: 2px solid #e6f0fa;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.partner-title-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.accordion-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  gap: 0.5rem;
+}
+
+.accordion-arrow {
+  transition: transform 0.2s;
+  font-size: 0.9em;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.accordion-arrow.open {
+  transform: rotate(90deg) translateX(2px);
+}
+
+.accordion-content {
+  display: none;
+  background: #f8fafc;
+  color: #222;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0 0 6px 6px;
+  font-size: 1rem;
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordion-content.open {
+  display: block;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive styles for tasks page - exact from HTML */
+@media (max-width: 900px) {
+  .max-w-\[600px\] { 
+    max-width: 90vw !important; 
+  }
+  .carousel-track img {
+    width: 24rem;
+    height: 15rem;
+  }
+  
+  .carousel-infinite {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-1, .md\:grid-cols-2 { 
+    grid-template-columns: 1fr !important; 
+  }
+  .max-w-4xl { 
+    align-items: center; 
+  }
+  .max-w-\[600px\] { 
+    max-width: 100% !important; 
+  }
+  .h-\[220px\] { 
+    height: auto !important; 
+  }
+  .carousel-track img {
+    width: 20rem;
+    height: 12rem;
+  }
+  
+  .carousel-infinite {
+    height: 12rem;
+  }
+}
+/* Garantir que o container principal ocupe toda a altura */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f3f4f6; /* mantém o fundo original para as outras páginas */
+}
+
+/* Estilo exclusivo para o rodapé da HomePage (não fixo) */
+.home-footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+  text-align: center;
+  /* sem position: fixed para que o flex coluna o coloque no final */
+}
