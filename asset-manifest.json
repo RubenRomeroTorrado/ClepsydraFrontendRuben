@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/ClepsydraFrontendRuben/static/css/main.52b6768f.css",
+    "main.js": "/ClepsydraFrontendRuben/static/js/main.8045abb4.js",
+    "static/js/453.c3904fb0.chunk.js": "/ClepsydraFrontendRuben/static/js/453.c3904fb0.chunk.js",
+    "static/media/10.jpg": "/ClepsydraFrontendRuben/static/media/10.196641fb0e8dbbd837f2.jpg",
+    "static/media/pt5_bg.png": "/ClepsydraFrontendRuben/static/media/pt5_bg.1e20327d52d19dc75a86.png",
+    "static/media/myirrigation.png": "/ClepsydraFrontendRuben/static/media/myirrigation.d644aeffe0f38235ffd6.png",
+    "static/media/9.jpg": "/ClepsydraFrontendRuben/static/media/9.2206e96996355be04cdb.jpg",
+    "static/media/12.jpg": "/ClepsydraFrontendRuben/static/media/12.91855aaeed0429a77474.jpg",
+    "static/media/16.jpg": "/ClepsydraFrontendRuben/static/media/16.7ddeae27cba7ea1b480a.jpg",
+    "static/media/2.JPG": "/ClepsydraFrontendRuben/static/media/2.ae03c80a05f6a311bed9.JPG",
+    "static/media/15.jpg": "/ClepsydraFrontendRuben/static/media/15.e9b2d54659ae280dbba6.jpg",
+    "static/media/7.jpg": "/ClepsydraFrontendRuben/static/media/7.1f81449499f8710e0051.jpg",
+    "static/media/14.jpg": "/ClepsydraFrontendRuben/static/media/14.5cfa04e5dcce8addfa55.jpg",
+    "static/media/13.jpg": "/ClepsydraFrontendRuben/static/media/13.9b5ab4b8889a23628db1.jpg",
+    "static/media/6.jpg": "/ClepsydraFrontendRuben/static/media/6.962773b26582369bd69c.jpg",
+    "static/media/3.JPG": "/ClepsydraFrontendRuben/static/media/3.08b34a46814236f210ea.JPG",
+    "static/media/logo_footer_c.png": "/ClepsydraFrontendRuben/static/media/logo_footer_c.35571ae919334e9c2fef.png",
+    "static/media/8.jpg": "/ClepsydraFrontendRuben/static/media/8.932b191769aef314d2c5.jpg",
+    "static/media/markers-soft@2x.png": "/ClepsydraFrontendRuben/static/media/markers-soft@2x.1f2cc17911c8d4a3fa01.png",
+    "static/media/irrocloud.png": "/ClepsydraFrontendRuben/static/media/irrocloud.f03824cd8060648485ab.png",
+    "static/media/lusofona_lg.png": "/ClepsydraFrontendRuben/static/media/lusofona_lg.6effabb13bc76eb17241.png",
+    "static/media/db_poster_rm.png": "/ClepsydraFrontendRuben/static/media/db_poster_rm.f951c6c77bdb9abd8772.png",
+    "static/media/apa_lg.png": "/ClepsydraFrontendRuben/static/media/apa_lg.af50bb875f20e0842f37.png",
+    "static/media/markers-soft.png": "/ClepsydraFrontendRuben/static/media/markers-soft.e52214306ad12a5c837e.png",
+    "static/media/logo_c.png": "/ClepsydraFrontendRuben/static/media/logo_c.57a1a7b438a37d3f32c8.png",
+    "static/media/logo_c2.png": "/ClepsydraFrontendRuben/static/media/logo_c2.391898b43505722f302c.png",
+    "static/media/quintacholda_lg.png": "/ClepsydraFrontendRuben/static/media/quintacholda_lg.0361419c0fee327efd67.png",
+    "static/media/ar_lg.png": "/ClepsydraFrontendRuben/static/media/ar_lg.53e104d32890b0c97ee5.png",
+    "static/media/arbvs_lg.jpg": "/ClepsydraFrontendRuben/static/media/arbvs_lg.c5f94f914939c270074d.jpg",
+    "index.html": "/ClepsydraFrontendRuben/index.html",
+    "main.52b6768f.css.map": "/ClepsydraFrontendRuben/static/css/main.52b6768f.css.map",
+    "main.8045abb4.js.map": "/ClepsydraFrontendRuben/static/js/main.8045abb4.js.map",
+    "453.c3904fb0.chunk.js.map": "/ClepsydraFrontendRuben/static/js/453.c3904fb0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52b6768f.css",
+    "static/js/main.8045abb4.js"
+  ]
+}

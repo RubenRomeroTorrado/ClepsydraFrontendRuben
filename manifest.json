@@ -1,0 +1,16 @@
+{
+  "short_name": "Clepsydra App",
+  "name": "💧 Clepsydra App - Gestão de Recursos Hídricos",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#174192",
+  "background_color": "#ffffff",
+  "description": "💧 Clepsydra App - Interface moderna para monitorização e gestão de recursos hídricos"
+}
