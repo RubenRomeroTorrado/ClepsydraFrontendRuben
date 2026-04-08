@@ -864,7 +864,17 @@ const Visual: React.FC = () => {
                 }}
               >
                 <option value="todos">Todos</option>
-                {sistemaAquiferoOptions.map(option => (
+                {sistemaAquiferoOptions.filter(option => {
+                  // Esconder opções específicas conforme a variável selecionada
+                  if (selectedVariable === 'profundidade') {
+                    return option !== 'T3 - BACIA DO TEJO-SADO / MARGEM ESQUERDA';
+                  }
+                  if (selectedVariable === 'nitrato') {
+                    return option !== 'T3 - BACIA DO TEJO-SADO / MARGEM ESQUERDA' &&
+                           option !== 'T7 - ALUVIÕES DO TEJO';
+                  }
+                  return true;
+                }).map(option => (
                   <option key={option} value={option}>
                     {option}
                   </option>
@@ -955,7 +965,7 @@ const Visual: React.FC = () => {
                         <th className="border px-2 py-1">Poço</th>
                         <th className="border px-2 py-1">Período</th>
                         <th className="border px-2 py-1">Tendência</th>
-                       </tr>
+                      </tr>
                     </thead>
                     <tbody>
                       {Object.entries(infoTableData).map(([codigo, data]) => (
@@ -972,7 +982,7 @@ const Visual: React.FC = () => {
                               📈
                             </button>
                             {codigo}
-                          </td>
+                           </td>
                           <td className="border px-2 py-1">{data.periodo}</td>
                           <td className="border px-2 py-1">{data.tendencia}</td>
                         </tr>
