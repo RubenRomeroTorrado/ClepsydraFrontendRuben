@@ -1078,7 +1078,8 @@ const Visual: React.FC = () => {
                           : 'Sem tendência significativa'
                       }</div>
                       <div>
-                        <strong>Variação anual:</strong> {(trendResult.slope * MS_PER_YEAR).toFixed(4)} {getUnit(selectedVariable)}/ano
+                        <strong>Variação anual:</strong> {(trendResult.slope * MS_PER_YEAR).toFixed(4)}{' '}
+  {selectedVariable === 'nitrato' ? 'mg/(L.ano)' : `${getUnit(selectedVariable)}/ano`}
                       </div>
                     </div>
                   ) : lastSortedData.length < 4 ? (
