@@ -71,9 +71,9 @@ const Visual: React.FC = () => {
   const chartRef = useRef<HTMLCanvasElement>(null);
 
   const variables = [
-    { value: 'profundidade', label: 'Profundidade', icon: 'fa-tint', color: 'blue' },
-    { value: 'nitrato', label: 'Nitratos', icon: 'fa-flask', color: 'green' },
-    { value: 'condutividade', label: 'Condutividade', icon: 'fa-bolt', color: 'yellow' },
+    { value: 'profundidade', label: 'Profundidade aquífero', icon: 'fa-tint', color: 'blue' },
+    { value: 'nitrato', label: 'Nitratos aquífero', icon: 'fa-flask', color: 'green' },
+    { value: 'condutividade', label: 'Condutividade aquífero', icon: 'fa-bolt', color: 'yellow' },
     { value: 'precipitacao', label: 'Precipitação', icon: 'fa-cloud-rain', color: 'purple' },
     { value: 'rega', label: 'Rega', icon: 'fa-tint', color: 'blue' },
     { value: 'temperaturas', label: 'Temperaturas', icon: 'fa-thermometer-half', color: 'red' },
