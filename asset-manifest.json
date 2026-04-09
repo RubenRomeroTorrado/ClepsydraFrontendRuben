@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ClepsydraFrontendRuben/static/css/main.52b6768f.css",
-    "main.js": "/ClepsydraFrontendRuben/static/js/main.982d63e9.js",
+    "main.js": "/ClepsydraFrontendRuben/static/js/main.7fb9245c.js",
     "static/js/453.c3904fb0.chunk.js": "/ClepsydraFrontendRuben/static/js/453.c3904fb0.chunk.js",
     "static/media/10.jpg": "/ClepsydraFrontendRuben/static/media/10.196641fb0e8dbbd837f2.jpg",
     "static/media/pt5_bg.png": "/ClepsydraFrontendRuben/static/media/pt5_bg.1e20327d52d19dc75a86.png",
@@ -31,11 +31,11 @@
     "static/media/arbvs_lg.jpg": "/ClepsydraFrontendRuben/static/media/arbvs_lg.c5f94f914939c270074d.jpg",
     "index.html": "/ClepsydraFrontendRuben/index.html",
     "main.52b6768f.css.map": "/ClepsydraFrontendRuben/static/css/main.52b6768f.css.map",
-    "main.982d63e9.js.map": "/ClepsydraFrontendRuben/static/js/main.982d63e9.js.map",
+    "main.7fb9245c.js.map": "/ClepsydraFrontendRuben/static/js/main.7fb9245c.js.map",
     "453.c3904fb0.chunk.js.map": "/ClepsydraFrontendRuben/static/js/453.c3904fb0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.52b6768f.css",
-    "static/js/main.982d63e9.js"
+    "static/js/main.7fb9245c.js"
   ]
 }
