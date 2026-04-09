@@ -8,7 +8,6 @@ const Header: React.FC = () => {
 
   const navItems = [
     { path: '/about-c', label: 'Sobre', icon: Home },
-    { path: '/parceiros', label: 'Parceiros', icon: Users },
     { path: '/biblio-dados', label: 'Biblioteca de Dados', icon: Database },
     { path: '/visual', label: 'Visualização', icon: BarChart3 },
     { path: '/condicoes-reais', label: 'Condições Reais', icon: Activity },
