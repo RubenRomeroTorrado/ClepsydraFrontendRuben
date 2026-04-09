@@ -516,7 +516,7 @@ const Visual: React.FC = () => {
         fill: false,
         tension: 0.2,
         showLine: true,
-        pointRadius: 3,
+        pointRadius: 0,
         pointHoverRadius: 6,
       });
       datasets.push({
@@ -527,7 +527,7 @@ const Visual: React.FC = () => {
         fill: false,
         tension: 0.2,
         showLine: true,
-        pointRadius: 3,
+        pointRadius: 0,
         pointHoverRadius: 6,
       });
     } else {
@@ -539,7 +539,7 @@ const Visual: React.FC = () => {
         fill: selectedVariable === 'precipitacao' || selectedVariable === 'profundidade' ? 'start' : false,
         tension: 0.2,
         showLine: isLineType,
-        pointRadius: isLineType ? 3 : 4,
+        pointRadius: (selectedVariable === 'precipitacao' || selectedVariable === 'caudal') ? 0 : (isLineType ? 3 : 4),
         pointHoverRadius: 6,
       });
     }
