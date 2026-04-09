@@ -76,8 +76,8 @@ const Visual: React.FC = () => {
     { value: 'condutividade', label: 'Condutividade aquífero', icon: 'fa-bolt', color: 'yellow' },
     { value: 'precipitacao', label: 'Precipitação', icon: 'fa-cloud-rain', color: 'purple' },
     { value: 'rega', label: 'Rega', icon: 'fa-tint', color: 'blue' },
-    { value: 'temperaturas', label: 'Temperaturas', icon: 'fa-thermometer-half', color: 'red' },
-    { value: 'caudal', label: 'Caudal', icon: 'fa-water', color: 'blue' }
+    { value: 'temperaturas', label: 'Temperaturas Ar', icon: 'fa-thermometer-half', color: 'red' },
+    { value: 'caudal', label: 'Caudal Tejo', icon: 'fa-water', color: 'blue' }
   ];
 
   // Variáveis que devem ser exibidas como gráfico de linhas
