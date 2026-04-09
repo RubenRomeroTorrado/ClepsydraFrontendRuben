@@ -84,7 +84,7 @@ const Visual: React.FC = () => {
   const lineVariables = ['precipitacao', 'profundidade', 'temperaturas', 'caudal'];
 
   // Variáveis que suportam análise de tendência
-  const trendVariables = ['profundidade', 'nitrato', 'caudal'];
+  const trendVariables = ['profundidade', 'nitrato'];
 
   // Textos específicos para a direção da tendência
   const trendDirectionText: Record<string, { aumento: string; diminuicao: string }> = {
