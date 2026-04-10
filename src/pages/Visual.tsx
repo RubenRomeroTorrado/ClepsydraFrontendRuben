@@ -534,8 +534,12 @@ const Visual: React.FC = () => {
       datasets.push({
         label: selectedVariable === 'profundidade' ? 'Profundidade Nível Água (m)' : `${variableConfig.label} (${getUnit(selectedVariable)})`,
         data: sortedData.map(d => ({ x: d.date, y: d.value })),
-        borderColor: selectedVariable === 'precipitacao' ? '#800080' : (selectedVariable === 'profundidade' ? '#007bff' : variableConfig.color),
-        backgroundColor: selectedVariable === 'precipitacao' ? 'rgba(128,0,128,0.2)' : (selectedVariable === 'profundidade' ? 'rgba(0,123,255,0.2)' : variableConfig.color),
+        borderColor: selectedVariable === 'precipitacao' ? '#800080' : 
+            (selectedVariable === 'profundidade' ? '#007bff' : 
+            (selectedVariable === 'condutividade' ? '#000000' : variableConfig.color)),
+        backgroundColor: selectedVariable === 'precipitacao' ? 'rgba(128,0,128,0.2)' : 
+            (selectedVariable === 'profundidade' ? 'rgba(0,123,255,0.2)' : 
+            (selectedVariable === 'condutividade' ? 'rgba(0,0,0,0.2)' : variableConfig.color)),
         fill: selectedVariable === 'precipitacao' || selectedVariable === 'profundidade' ? 'start' : false,
         tension: 0.2,
         showLine: isLineType,
