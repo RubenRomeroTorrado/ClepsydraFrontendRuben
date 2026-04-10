@@ -875,7 +875,8 @@ const Visual: React.FC = () => {
                   }
                   if (selectedVariable === 'nitrato') {
                     return option !== 'T3 - BACIA DO TEJO-SADO / MARGEM ESQUERDA' &&
-                           option !== 'T7 - ALUVIÕES DO TEJO';
+                           option !== 'T7 - ALUVIÕES DO TEJO' &&
+                           option !== 'T1 - BACIA DO TEJO-SADO / MARGEM DIREITA';
                   }
                   return true;
                 }).map(option => (
