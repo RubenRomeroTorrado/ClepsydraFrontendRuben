@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import irrocloudLogo from '../assets/images/irrocloud.png';
 import myirrigationLogo from '../assets/images/myirrigation.png';
+import diverofficeLogo from '../assets/images/diveroffice.jpg';
+import graficosImage from '../assets/images/gráficos.jpg';
 import image6 from '../assets/images/6.jpg';
 import image7 from '../assets/images/7.jpg';
 import image8 from '../assets/images/8.jpg';
@@ -24,6 +26,7 @@ const RealConditions: React.FC = () => {
   const [showTooltip, setShowTooltip] = useState(false);
   const [tooltipContent, setTooltipContent] = useState('');
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const [showModal, setShowModal] = useState(false); // Estado para o modal
 
   const images: ImageData[] = [
     {
@@ -103,14 +106,13 @@ const RealConditions: React.FC = () => {
     let left = event.clientX + offset;
     let top = event.clientY + offset;
     
-    // Ajustar para não sair da janela
     const winWidth = window.innerWidth;
     const winHeight = window.innerHeight;
     
-    if (left + 200 > winWidth) { // 200px é uma estimativa da largura do tooltip
+    if (left + 200 > winWidth) {
       left = winWidth - 210;
     }
-    if (top + 50 > winHeight) { // 50px é uma estimativa da altura do tooltip
+    if (top + 50 > winHeight) {
       top = winHeight - 60;
     }
     
@@ -141,7 +143,6 @@ const RealConditions: React.FC = () => {
         <section className="mb-10">
           <div className="carousel-infinite">
             <div className="carousel-track">
-              {/* Primeira sequência de imagens */}
               {images.map((image, index) => (
                 <div key={`first-${index}`} className="relative group">
                   <img 
@@ -155,8 +156,6 @@ const RealConditions: React.FC = () => {
                   />
                 </div>
               ))}
-              
-              {/* Duplicação das imagens para o efeito infinito */}
               {images.map((image, index) => (
                 <div key={`second-${index}`} className="relative group">
                   <img 
@@ -180,7 +179,8 @@ const RealConditions: React.FC = () => {
             A experimentação é suportada pelas plataformas Irrocloud e myIrrigation. 
             Estas permitem monitorizar remotamente a humidade do solo (teor de água e potencial de água).
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {/* Irrocloud */}
             <div className="flex flex-col items-center">
               <a href="https://www.irrocloud.com/irrocloud/login/?next=/" target="_blank" rel="noopener noreferrer">
                 <img 
@@ -192,6 +192,8 @@ const RealConditions: React.FC = () => {
               </a>
               <span className="text-blue-800 font-semibold">Irrocloud</span>
             </div>
+
+            {/* MyIrrigation */}
             <div className="flex flex-col items-center">
               <a href="https://myirrigation.eu/login" target="_blank" rel="noopener noreferrer">
                 <img 
@@ -202,6 +204,22 @@ const RealConditions: React.FC = () => {
                 />
               </a>
               <span className="text-blue-800 font-semibold">MyIrrigation</span>
+            </div>
+
+            {/* Nova imagem (Diver Office) que abre modal com gráficos */}
+            <div className="flex flex-col items-center">
+              <button
+                onClick={() => setShowModal(true)}
+                className="cursor-pointer"
+              >
+                <img 
+                  src={diverofficeLogo} 
+                  alt="Diver Office" 
+                  className="rounded-lg shadow-md w-full max-w-xs mb-2 hover:scale-105 transition" 
+                  loading="lazy"
+                />
+              </button>
+              <span className="text-blue-800 font-semibold">Diver Office</span>
             </div>
           </div>
         </section>
@@ -219,8 +237,29 @@ const RealConditions: React.FC = () => {
           {tooltipContent}
         </div>
       )}
+
+      {/* Modal para exibir a imagem gráficos.jpg */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4" onClick={() => setShowModal(false)}>
+          <div className="relative max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute top-2 right-2 text-white bg-black bg-opacity-50 rounded-full p-1 hover:bg-opacity-75 z-10"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img 
+              src={graficosImage} 
+              alt="Gráficos" 
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default RealConditions; 
+export default RealConditions;
