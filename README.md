@@ -4,7 +4,7 @@ Interface moderna para monitorização e gestão de recursos hídricos do projet
 
 ## 🚀 Demo
 
-Acesse a aplicação em: [https://diogopinto.github.io/clepsydra_frontend](https://diogopinto.github.io/clepsydra_frontend)
+Acesse a aplicação em: [https://diogopinto.github.io/clepsydra_frontend]((https://rubenromerotorrado.github.io/ClepsydraFrontendRuben/))
 
 ## 🛠️ Tecnologias
 
